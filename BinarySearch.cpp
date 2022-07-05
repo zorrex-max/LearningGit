@@ -32,14 +32,22 @@ int BinarySearchz(int arr[], int size, int key)
 
 int main()
 {
-    int even_arr[6] = {2, 4, 6, 8, 10, 12};
-    int odd_arr[7] = {1, 3, 5, 7, 9, 11, 13};
+    int n;
+    cout<<"Enter size of the array ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter matrix ";
 
-    int ans = BinarySearchz(even_arr, 6, 8);
-    cout << ans << endl;
+    for(int i=0 ; i<n ; i++)
+    {
+        cin>>arr[i];
+    }
 
-    int ans2 = BinarySearchz(odd_arr, 7, 9);
-    cout << ans2 << endl;
+    int key;
+    cout<<"Element key ";
+    cin>>key;
+    int ans = BinarySearchz(arr, n, key);
+    cout << "Element found at index "<<ans+1 << endl;
 
     return 0;
 }
